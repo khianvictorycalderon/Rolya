@@ -1,8 +1,21 @@
 import Hero from "./components/hero";
+import NavBar from "./components/navbar";
 
 export default function App() {
   return (
     <>
+      <NavBar
+        BG_Color="bg-slate-950"
+        ID_Ref="hero"
+        Buttons={[
+          { Label: "About", OnClick: () => alert("About") },
+          { Label: "Buy", OnClick: () => alert("Buying...") },
+          { Label: "Rent", OnClick: () => alert("Renting...") },
+          { Label: "Invest", OnClick: () => alert("Investing...") },
+          { Label: "Contact", OnClick: () => alert("Contact us") },
+          { Label: "Service", OnClick: () => alert("Services") },
+        ]}
+      />
       <div id="hero">
         <Hero
           BG_Image="images/bg.jpg"
@@ -24,6 +37,40 @@ export default function App() {
         />
       </div>
       <div>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
+        <p>asf</p>
         <p>asf</p>
       </div>
     </>
