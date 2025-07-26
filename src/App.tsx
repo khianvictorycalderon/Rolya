@@ -1,7 +1,13 @@
+import { useState } from "react";
 import Hero from "./components/hero";
 import NavBar from "./components/navbar";
+import ChooseLocation from "./static_components/choose_loc";
 
 export default function App() {
+
+  const [selectedCountry, setSelectedCountry] = useState<string>("");
+  const [selectedCity, setSelectedCity] = useState<string>("");
+
   return (
     <>
       <NavBar
@@ -37,6 +43,10 @@ export default function App() {
           ]}
         />
       </div>
+      <ChooseLocation
+        CountrySetter={setSelectedCountry}
+        CitySetter={setSelectedCity}
+      />
       <div>
         <p>asf</p>
         <p>asf</p>
