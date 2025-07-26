@@ -5,6 +5,7 @@ import ChooseLocation from "./static_components/choose_loc";
 
 export default function App() {
 
+  // I will use this later
   const [selectedCountry, setSelectedCountry] = useState<string>("");
   const [selectedCity, setSelectedCity] = useState<string>("");
 
