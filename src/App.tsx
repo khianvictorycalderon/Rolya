@@ -1,7 +1,11 @@
+import { slideToID, useOnScrollAt } from "./Utility";
+
 export default function App() {
   return (
     <>
-      <h1>Hello World</h1>
+      <div id="hero">
+        
+      </div>
     </>
   )
 }
