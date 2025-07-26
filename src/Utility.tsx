@@ -28,7 +28,6 @@ export const useOnScrollAt = (
   }, [elementId, onVisible, onHidden]);
 };
 
-
 export const slideToID = (id: string): void => {
     const element = document.getElementById(id);
     if (element) {
