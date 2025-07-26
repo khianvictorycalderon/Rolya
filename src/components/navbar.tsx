@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 interface NavBarProps {
   BG_Color: string;
+  Logo_Image?: string;
   ID_Ref?: string;
   Buttons: {
     Label: string;
@@ -37,11 +38,10 @@ const useOnScrollAt = (
   }, [elementId, onVisible, onHidden]);
 };
 
-export default function NavBar({ BG_Color, ID_Ref, Buttons }: NavBarProps) {
-  const [applyBg, setApplyBg] = useState(!ID_Ref); // true if no ID_Ref
+export default function NavBar({ BG_Color, Logo_Image, ID_Ref, Buttons }: NavBarProps) {
+  const [applyBg, setApplyBg] = useState(!ID_Ref);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Only run scroll detection if ID_Ref is provided
   useOnScrollAt(
     ID_Ref || "",
     () => setApplyBg(false),
@@ -52,27 +52,35 @@ export default function NavBar({ BG_Color, ID_Ref, Buttons }: NavBarProps) {
     <nav className="fixed top-0 left-0 w-full z-50">
       {/* Desktop Navbar */}
       <div
-        className={`hidden sm:block transition-colors duration-300 ${
-          applyBg ? BG_Color : "bg-transparent"
-        }`}
+        className={`hidden sm:flex items-center justify-between transition-colors duration-300 px-6 h-16 ${applyBg ? BG_Color : "bg-transparent"}`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-center space-x-6">
-            {Buttons.map((btn, i) => (
-              <span
-                key={i}
-                onClick={btn.OnClick}
-                className="cursor-pointer text-gray-300 hover:text-white hover:bg-slate-800 rounded-md px-4 py-2 text-sm font-medium transition"
-              >
-                {btn.Label}
-              </span>
-            ))}
-          </div>
+        {/* Left - Logo */}
+        <div className="flex-shrink-0">
+          {Logo_Image && (
+            <img src={Logo_Image} alt="Logo" className="h-10 w-auto" />
+          )}
         </div>
+
+        {/* Center - Buttons */}
+        <div className="flex space-x-6">
+          {Buttons.map((btn, i) => (
+            <span
+              key={i}
+              onClick={btn.OnClick}
+              className="cursor-pointer text-gray-300 hover:text-white hover:bg-slate-800 rounded-md px-4 py-2 text-sm font-medium transition"
+            >
+              {btn.Label}
+            </span>
+          ))}
+        </div>
+
+        {/* Right Spacer (optional for symmetry) */}
+        <div className="w-10" />
       </div>
 
-      {/* Mobile Header (always solid) */}
+      {/* Mobile Header */}
       <div className={`sm:hidden ${BG_Color} px-4 py-3 flex items-center justify-between`}>
+        {/* Menu Toggle (left) */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="p-2 rounded-md text-gray-200 hover:text-white hover:bg-gray-700 transition"
@@ -87,6 +95,11 @@ export default function NavBar({ BG_Color, ID_Ref, Buttons }: NavBarProps) {
             </svg>
           )}
         </button>
+
+        {/* Logo (right) */}
+        {Logo_Image && (
+          <img src={Logo_Image} alt="Logo" className="h-10 w-auto" />
+        )}
       </div>
 
       {/* Mobile Dropdown */}

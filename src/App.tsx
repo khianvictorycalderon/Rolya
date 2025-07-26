@@ -6,6 +6,7 @@ export default function App() {
     <>
       <NavBar
         BG_Color="bg-slate-950"
+        Logo_Image="icons/rolya.png"
         ID_Ref="hero"
         Buttons={[
           { Label: "About", OnClick: () => alert("About") },
