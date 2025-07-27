@@ -6,7 +6,7 @@ export default function Footer() {
         <div>
           <h2 className="text-2xl font-bold text-white mb-4">Rolya Realty</h2>
           <p className="text-gray-400 text-sm">
-            Your trusted partner in finding the perfect property — whether it's land, a home, or an investment.
+            Your trusted partner in finding the perfect property. Whether it's land, a home, or an investment.
           </p>
           <p className="text-gray-400 text-sm mt-2">
             Demo website created by{" "}
