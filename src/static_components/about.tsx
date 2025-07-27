@@ -8,7 +8,8 @@ const stats = [
 export default function AboutUs() {
   return (
     <div 
-        className="bg-[url('/images/people.jpg')] bg-fixed bg-center relative isolate overflow-hidden bg-gray-900 py-26 sm:py-34"
+        className="bg-fixed bg-center relative isolate overflow-hidden bg-gray-900 py-26 sm:py-34"
+  	style={{ backgroundImage: `url("images/people.jpg")` }}
         >
       
       <div className="absolute inset-0 -z-10 bg-black/80" />
