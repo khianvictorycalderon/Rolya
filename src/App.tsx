@@ -6,6 +6,7 @@ import CardList from "./components/card_list_overlay";
 import { slideToID } from "./Utility";
 import TalkAgent from "./static_components/talk_agent";
 import ServiceOffers from "./static_components/service_offer";
+import AboutUs from "./static_components/about";
 
 // Only show alert on production so that I won't be annoyed in development
 const isProduction = process.env.NODE_ENV === "production";
@@ -30,7 +31,7 @@ export default function App() {
         Logo_Image="icons/rolya.png"
         ID_Ref="hero"
         Buttons={[
-          { Label: "About", OnClick: () => alert("About") },
+          { Label: "About", OnClick: () => slideToID("about") },
           { Label: "Buy", OnClick: () => slideToID("sales_listing") },
           { Label: "Rent", OnClick: () => slideToID("rental_listing") },
           { Label: "Invest", OnClick: () => slideToID("investment_listing") },
@@ -296,6 +297,8 @@ export default function App() {
           </div>
         </section>
 
+        <div id="about"/>
+        <AboutUs/>
     </>
   )
 }
