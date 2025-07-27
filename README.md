@@ -17,13 +17,20 @@ This section is provided for reference only, to give you insight into how the pr
 ## Dependencies
 - `npm install tailwindcss @tailwindcss/vite`
 - `npm install -D @types/node`
+- `npm install -D gh-pages`
 
 ## Configuration Dependencies
 - Update `vite.config.ts`:
-  ```bash
+  ```
   import tailwindcss from '@tailwindcss/vite'
 
   plugins: [
     tailwindcss()
   ]
+  ```
+- Update `package.json`:
+  ```
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  }
   ```
