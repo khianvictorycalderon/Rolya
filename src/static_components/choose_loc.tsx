@@ -32,7 +32,7 @@ export default function ChooseLocation({ CountrySetter, CitySetter }: ChooseLoca
   };
 
   return (
-    <section className="w-full bg-gray-100 text-slate-900 py-16">
+    <section className="w-full bg-slate-50 text-slate-900 pt-16">
       <div className="max-w-screen-md mx-auto px-6">
         <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-center">
           Choose Location
@@ -74,6 +74,11 @@ export default function ChooseLocation({ CountrySetter, CitySetter }: ChooseLoca
           </div>
         </div>
       </div>
+
+      <p className="text-center mt-4">
+        Narrow down properties by your preferred location.
+      </p>
+
     </section>
   );
 }
