@@ -20,7 +20,7 @@ export default function CardList({ Data, ClassName = "", MaxRow }: CardListProps
         1: "lg:w-full",
         2: "lg:w-[45%]",
         3: "lg:w-[30%]",
-        4: "lg:w-[18%]",
+        4: "lg:w-[20%]",
         5: "lg:w-[17%]",
         6: "lg:w-[15%]"
     }

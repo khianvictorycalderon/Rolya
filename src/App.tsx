@@ -29,7 +29,7 @@ export default function App() {
         ID_Ref="hero"
         Buttons={[
           { Label: "About", OnClick: () => alert("About") },
-          { Label: "Buy", OnClick: () => alert("Buying...") },
+          { Label: "Buy", OnClick: () => slideToID("sales_listing") },
           { Label: "Rent", OnClick: () => alert("Renting...") },
           { Label: "Invest", OnClick: () => alert("Investing...") },
           { Label: "Contact", OnClick: () => alert("Contact us") },
@@ -105,6 +105,63 @@ export default function App() {
         </div>
       </section>
       
+      <div id="sales_listing"/>
+      <section className="pb-20 bg-white">
+        <div className="max-w-screen-2xl mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-10 text-slate-800 text-center">
+            Sales Listings
+          </h2>
+          <CardList
+            Data={[
+              {
+                Date: "July 26, 2025",
+                Title: "Seaside Bungalow in Solaria",
+                Description: "Beachfront 3-bedroom with private deck and sea views.",
+                Image: "images/sales_listing/house1.jpg",
+                OnClick: () => alert("Clicked Solaria Bungalow"),
+                Location: `${selectedCountry || "Australia"}, ${selectedCity || "Solaria"}`,
+              },
+              {
+                Date: "July 22, 2025",
+                Title: "Urban Loft in Zenthra",
+                Description: "Stylish loft with industrial design in downtown Zenthra.",
+                Image: "images/sales_listing/house2.jpg",
+                OnClick: () => alert("Clicked Zenthra Loft"),
+                Location: `${selectedCountry || "USA"}, ${selectedCity || "Zenthra"}`,
+              },
+              {
+                Date: "July 20, 2025",
+                Title: "Countryside Cottage in Corvalis",
+                Description: "2-bedroom cottage with a garden and scenic views.",
+                Image: "images/sales_listing/house3.jpg",
+                OnClick: () => alert("Clicked Corvalis Cottage"),
+                Location: `${selectedCountry || "United Kingdom"}, ${selectedCity || "Corvalis"}`,
+              },
+              {
+                Date: "July 19, 2025",
+                Title: "Penthouse in Elaria Heights",
+                Description: "Luxury penthouse with panoramic skyline view and rooftop pool.",
+                Image: "images/sales_listing/house4.jpg",
+                OnClick: () => alert("Clicked Elaria Penthouse"),
+                Location: `${selectedCountry || "Germany"}, ${selectedCity || "Elaria"}`
+              }
+            ]}
+            MaxRow={4}
+          />
+          <div className="flex justify-center mt-10">
+            <button
+              className="px-6 py-3 bg-slate-900 text-white text-lg font-semibold rounded-xl shadow-md hover:scale-105 hover:cursor-pointer hover:bg-slate-800 transition-all duration-200 active:scale-95"
+              onClick={() => alert("Clicked see more listing!")}
+            >
+              See More Listings
+            </button>
+          </div>
+          <p className="mt-8 text-center text-slate-600 max-w-3xl mx-auto">
+            Explore our diverse collection of homes for sale, from serene retreats to modern city living. Find the perfect property that matches your lifestyle and budget.
+          </p>
+        </div>
+      </section>
+
     </>
   )
 }
