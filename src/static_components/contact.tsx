@@ -56,7 +56,7 @@ export default function ContactUs() {
   };
 
   return (
-    <div id="contact" className="bg-slate-900 px-6 py-24 sm:py-32 lg:px-8">
+    <div className="bg-slate-900 px-6 py-24 sm:py-32 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-4xl font-semibold text-white sm:text-5xl">Let’s Talk</h2>
         <p className="mt-4 text-lg text-gray-400">
