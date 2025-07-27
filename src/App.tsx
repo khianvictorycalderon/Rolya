@@ -100,7 +100,7 @@ export default function App() {
             MaxRow={3}
           />
           <p className="mt-8 text-center text-slate-600 max-w-3xl mx-auto">
-            These handpicked properties showcase the best in modern design, location, and comfort—perfect for families, professionals, and investors seeking premium real estate in our top fictional cities.
+            These handpicked properties showcase the best in modern design, location, and perfect for families, professionals, and investors seeking premium real estate in our top fictional cities.
           </p>
         </div>
       </section>
@@ -214,10 +214,69 @@ export default function App() {
               </button>
             </div>
             <p className="mt-8 text-center text-slate-600 max-w-3xl mx-auto">
-              Discover commercial and residential buildings available for lease in prime locations—ideal for businesses, developers, and professionals seeking scalable spaces.
+              Discover commercial and residential buildings available for lease in prime locations. Ideal for businesses, developers, and professionals seeking scalable spaces.
             </p>
           </div>
         </section>
+
+        <div id="investment_listing" />
+          <section className="pb-20 bg-white">
+            <div className="max-w-screen-2xl mx-auto px-6">
+              <h2 className="text-3xl font-bold mb-10 text-slate-800 text-center">
+                Investment Properties
+              </h2>
+              <CardList
+                Data={[
+                  {
+                    Date: "July 28, 2025",
+                    Title: "Agricultural Land in Verdantia",
+                    Description: "50 hectares of fertile soil ideal for crop production and farming.",
+                    Image: "images/investment_listing/land1.jpg",
+                    OnClick: () => alert("Clicked Verdantia Farmland"),
+                    Location: `${selectedCountry || "Brazil"}, ${selectedCity || "Verdantia"}`
+                  },
+                  {
+                    Date: "July 24, 2025",
+                    Title: "Commercial Lot in Auravale",
+                    Description: "Prime roadside plot suited for gas stations or logistics centers.",
+                    Image: "images/investment_listing/land2.jpg",
+                    OnClick: () => alert("Clicked Auravale Lot"),
+                    Location: `${selectedCountry || "USA"}, ${selectedCity || "Auravale"}`
+                  },
+                  {
+                    Date: "July 22, 2025",
+                    Title: "Beachfront Land in Calydra",
+                    Description: "Undeveloped coastal land perfect for resort development.",
+                    Image: "images/investment_listing/land3.jpg",
+                    OnClick: () => alert("Clicked Calydra Beachfront"),
+                    Location: `${selectedCountry || "Thailand"}, ${selectedCity || "Calydra"}`
+                  },
+                  {
+                    Date: "July 20, 2025",
+                    Title: "Mountain View Acreage in Norwyn",
+                    Description: "Large elevated lot with scenic views, ideal for eco-lodges.",
+                    Image: "images/investment_listing/land4.jpg",
+                    OnClick: () => alert("Clicked Norwyn Acreage"),
+                    Location: `${selectedCountry || "New Zealand"}, ${selectedCity || "Norwyn"}`
+                  }
+                ]}
+                MaxRow={4}
+              />
+
+              <div className="flex justify-center mt-10">
+                <button
+                  className="px-6 py-3 bg-slate-900 text-white text-lg font-semibold rounded-xl shadow-md hover:scale-105 hover:cursor-pointer hover:bg-slate-800 transition-all duration-200 active:scale-95"
+                  onClick={() => alert("Clicked see more investment listings!")}
+                >
+                  See More Investment Options
+                </button>
+              </div>
+
+              <p className="mt-8 text-center text-slate-600 max-w-3xl mx-auto">
+                Browse high-potential land properties perfect for agricultural, commercial, or eco-tourism ventures. Invest in locations with long-term value and development opportunity.
+              </p>
+            </div>
+          </section>
 
     </>
   )
