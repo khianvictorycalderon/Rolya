@@ -7,6 +7,7 @@ import { slideToID } from "./Utility";
 import TalkAgent from "./static_components/talk_agent";
 import ServiceOffers from "./static_components/service_offer";
 import AboutUs from "./static_components/about";
+import ContactUs from "./static_components/contact";
 
 // Only show alert on production so that I won't be annoyed in development
 const isProduction = process.env.NODE_ENV === "production";
@@ -36,7 +37,7 @@ export default function App() {
           { Label: "Rent", OnClick: () => slideToID("rental_listing") },
           { Label: "Invest", OnClick: () => slideToID("investment_listing") },
           { Label: "Service", OnClick: () => slideToID("service") },
-          { Label: "Contact", OnClick: () => alert("Contact us") },
+          { Label: "Contact", OnClick: () => slideToID("contact") },
         ]}
       />
 
@@ -299,6 +300,9 @@ export default function App() {
 
         <div id="about"/>
         <AboutUs/>
+
+        <div id="contact"/>
+        <ContactUs/>
     </>
   )
 }
