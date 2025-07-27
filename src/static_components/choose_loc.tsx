@@ -32,7 +32,7 @@ export default function ChooseLocation({ CountrySetter, CitySetter }: ChooseLoca
   };
 
   return (
-    <section className="w-full bg-slate-900 text-white py-16">
+    <section className="w-full bg-gray-100 text-slate-900 py-16">
       <div className="max-w-screen-md mx-auto px-6">
         <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-center">
           Choose Location
@@ -45,7 +45,7 @@ export default function ChooseLocation({ CountrySetter, CitySetter }: ChooseLoca
             <select
               value={localCountry}
               onChange={handleCountryChange}
-              className="w-full p-3 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-600"
+              className="w-full p-3 bg-white border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-600"
             >
               <option value="" disabled>Select a country</option>
               {countries.map((country, i) => (
@@ -62,7 +62,7 @@ export default function ChooseLocation({ CountrySetter, CitySetter }: ChooseLoca
             <select
               value={localCity}
               onChange={handleCityChange}
-              className="w-full p-3 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-600"
+              className="w-full p-3 bg-white border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-600"
             >
               <option value="" disabled>Select a city</option>
               {fictionalCities.map((city, i) => (
