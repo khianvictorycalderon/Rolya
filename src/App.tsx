@@ -1,13 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Hero from "./components/hero";
 import NavBar from "./components/navbar";
 import ChooseLocation from "./static_components/choose_loc";
+
+// Only show alert on production so that I won't be annoyed in development
+const isProduction = process.env.NODE_ENV === "production";
+const disclaimerMessage = "This is a demo website created for presentation purposes only and does not represent a real business.";
 
 export default function App() {
 
   // I will use this later
   const [selectedCountry, setSelectedCountry] = useState<string>("");
   const [selectedCity, setSelectedCity] = useState<string>("");
+
+  useEffect(() => {
+    if (isProduction) {
+      alert(disclaimerMessage);
+    }
+  },[]);
 
   return (
     <>
