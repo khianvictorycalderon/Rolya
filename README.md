@@ -16,6 +16,7 @@ This section is provided for reference only, to give you insight into how the pr
 
 ## Dependencies
 - `npm install tailwindcss @tailwindcss/vite`
+- `npm install -D @types/node`
 
 ## Configuration Dependencies
 - Update `vite.config.ts`:
