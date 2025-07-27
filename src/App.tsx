@@ -30,7 +30,7 @@ export default function App() {
         Buttons={[
           { Label: "About", OnClick: () => alert("About") },
           { Label: "Buy", OnClick: () => slideToID("sales_listing") },
-          { Label: "Rent", OnClick: () => alert("Renting...") },
+          { Label: "Rent", OnClick: () => slideToID("rental_listing") },
           { Label: "Invest", OnClick: () => alert("Investing...") },
           { Label: "Contact", OnClick: () => alert("Contact us") },
           { Label: "Service", OnClick: () => alert("Services") },
@@ -161,6 +161,63 @@ export default function App() {
           </p>
         </div>
       </section>
+
+      <div id="rental_listing" />
+        <section className="pb-20 bg-slate-50">
+          <div className="max-w-screen-2xl mx-auto px-6">
+            <h2 className="text-3xl font-bold mb-10 text-slate-800 text-center">
+              Rental Listings
+            </h2>
+            <CardList
+              Data={[
+                {
+                  Date: "July 27, 2025",
+                  Title: "Office Tower in Metronova",
+                  Description: "20-story commercial building with elevator and parking.",
+                  Image: "images/rental_listing/building1.jpg",
+                  OnClick: () => alert("Clicked Metronova Tower"),
+                  Location: `${selectedCountry || "Singapore"}, ${selectedCity || "Metronova"}`
+                },
+                {
+                  Date: "July 23, 2025",
+                  Title: "Retail Complex in Solaris",
+                  Description: "Multi-unit retail space near central plaza with high foot traffic.",
+                  Image: "images/rental_listing/building2.jpg",
+                  OnClick: () => alert("Clicked Solaris Complex"),
+                  Location: `${selectedCountry || "South Korea"}, ${selectedCity || "Solaris"}`
+                },
+                {
+                  Date: "July 21, 2025",
+                  Title: "Mixed-Use Building in Vernessa",
+                  Description: "Residential and commercial floors with rooftop garden.",
+                  Image: "images/rental_listing/building3.jpg",
+                  OnClick: () => alert("Clicked Vernessa Building"),
+                  Location: `${selectedCountry || "France"}, ${selectedCity || "Vernessa"}`
+                },
+                {
+                  Date: "July 18, 2025",
+                  Title: "Tech Hub in Nuvora",
+                  Description: "Modern smart-building ideal for startups and tech firms.",
+                  Image: "images/rental_listing/building4.jpg",
+                  OnClick: () => alert("Clicked Nuvora Hub"),
+                  Location: `${selectedCountry || "USA"}, ${selectedCity || "Nuvora"}`
+                }
+              ]}
+              MaxRow={4}
+            />
+            <div className="flex justify-center mt-10">
+              <button
+                className="px-6 py-3 bg-slate-900 text-white text-lg font-semibold rounded-xl shadow-md hover:scale-105 hover:cursor-pointer hover:bg-slate-800 transition-all duration-200 active:scale-95"
+                onClick={() => alert("Clicked see more rental listings!")}
+              >
+                See More Rentals
+              </button>
+            </div>
+            <p className="mt-8 text-center text-slate-600 max-w-3xl mx-auto">
+              Discover commercial and residential buildings available for lease in prime locations—ideal for businesses, developers, and professionals seeking scalable spaces.
+            </p>
+          </div>
+        </section>
 
     </>
   )
