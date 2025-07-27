@@ -39,13 +39,13 @@ const people = [
 
 export default function TalkAgent() {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-slate-900 pb-24 sm:pb-32">
       <div className="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
         <div className="max-w-xl">
-          <h2 className="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-pretty text-slate-50 sm:text-4xl">
             Talk to our agents
           </h2>
-          <p className="mt-6 text-lg/8 text-gray-600">
+          <p className="mt-6 text-lg/8 text-gray-300">
             We're a dynamic group of individuals who are passionate about what we do and dedicated to delivering the
             best results for our clients.
           </p>
@@ -60,9 +60,12 @@ export default function TalkAgent() {
                   className="size-16 rounded-full outline-1 -outline-offset-1 outline-black/5"
                 />
                 <div>
-                  <h3 className="text-base/7 font-semibold tracking-tight text-gray-900">{person.name}</h3>
+                  <h3 className="text-base/7 font-semibold tracking-tight text-slate-50">{person.name}</h3>
                   <p className="text-sm/6 font-semibold text-indigo-600">{person.role}</p>
-                  <button onClick={() => alert("Contacting...")} className="transition duration-300 bg-slate-900 text-white p-2 rounded-md font-semibold hover:cursor-pointer hover:bg-slate-700 hover:scale-105">Contact</button>
+                  <button 
+                    onClick={() => alert("Contacting...")} 
+                    className="transition duration-300 bg-gray-600 text-white py-2 px-4 mt-4 rounded-md font-semibold hover:cursor-pointer hover:bg-gray-500 hover:scale-105"
+                    >Contact</button>
                 </div>
               </div>
             </li>

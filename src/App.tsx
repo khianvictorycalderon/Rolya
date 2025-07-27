@@ -5,6 +5,7 @@ import ChooseLocation from "./static_components/choose_loc";
 import CardList from "./components/card_list_overlay";
 import { slideToID } from "./Utility";
 import TalkAgent from "./static_components/talk_agent";
+import ServiceOffers from "./static_components/service_offer";
 
 // Only show alert on production so that I won't be annoyed in development
 const isProduction = process.env.NODE_ENV === "production";
@@ -33,8 +34,8 @@ export default function App() {
           { Label: "Buy", OnClick: () => slideToID("sales_listing") },
           { Label: "Rent", OnClick: () => slideToID("rental_listing") },
           { Label: "Invest", OnClick: () => slideToID("investment_listing") },
+          { Label: "Service", OnClick: () => slideToID("service") },
           { Label: "Contact", OnClick: () => alert("Contact us") },
-          { Label: "Service", OnClick: () => alert("Services") },
         ]}
       />
 
@@ -221,7 +222,7 @@ export default function App() {
         </section>
 
         <div id="investment_listing" />
-        <section className="pb-20 bg-white">
+        <section className="pb-20 bg-slate-50">
           <div className="max-w-screen-2xl mx-auto px-6">
             <h2 className="text-3xl font-bold mb-10 text-slate-800 text-center">
               Investment Properties
@@ -281,6 +282,20 @@ export default function App() {
 
         <div id="talk_agent"/>
         <TalkAgent/>
+
+        <div id="service" />
+        <section className="pt-20 bg-slate-50">
+          <div className="max-w-screen-xl mx-auto px-6">
+            <h2 className="text-3xl font-bold text-slate-800 text-center">
+              Our Services
+            </h2>
+            <p className="text-gray-500 text-center max-w-2xl mx-auto mt-4">
+              At Rolya Real Estate, we offer a comprehensive suite of services tailored to meet every client’s property needs. From buying and selling homes to expert investment advice and seamless rental management, our team is here to help you every step of the way.
+            </p>
+            <ServiceOffers />
+          </div>
+        </section>
+
     </>
   )
 }
