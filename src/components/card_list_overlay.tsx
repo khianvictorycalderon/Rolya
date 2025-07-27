@@ -10,16 +10,28 @@ interface CardListItem {
 interface CardListProps {
   Data: CardListItem[];
   ClassName?: string;
+  MaxRow?: number;
 }
 
-export default function CardList({ Data, ClassName = "" }: CardListProps) {
+export default function CardList({ Data, ClassName = "", MaxRow }: CardListProps) {
+
+    // If it works, don't touch it
+    const RowPerCol:{ [key: number]: string } = {
+        1: "lg:w-full",
+        2: "lg:w-[45%]",
+        3: "lg:w-[30%]",
+        4: "lg:w-[18%]",
+        5: "lg:w-[17%]",
+        6: "lg:w-[15%]"
+    }
+
   return (
     <div className={`flex flex-wrap gap-6 justify-center ${ClassName}`}>
         {Data.map((item, index) => (
             <article
                 key={index}
                 onClick={item.OnClick}
-                className="w-full sm:w-[48%] lg:w-[31%] relative overflow-hidden rounded-lg shadow-sm transition hover:shadow-lg hover:cursor-pointer h-[420px] hover:scale-105" // <- set fixed height
+                className={`w-full sm:w-[48%] ${MaxRow && RowPerCol[MaxRow] || "lg:w-[30%]"} relative overflow-hidden rounded-lg shadow-sm transition hover:shadow-lg hover:cursor-pointer min-h-[420px] hover:scale-105`}
             >
             <img
                 alt={item.Title}

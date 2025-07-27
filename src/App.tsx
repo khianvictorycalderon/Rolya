@@ -36,7 +36,7 @@ export default function App() {
           { Label: "Service", OnClick: () => alert("Services") },
         ]}
       />
-      
+
       <div id="hero">
         <Hero
           BG_Image="images/bg.jpg"
@@ -97,6 +97,8 @@ export default function App() {
                 Location: `${selectedCountry || "Japan"}, ${selectedCity || "Velmora"}`,
               },
             ]}
+
+            MaxRow={3}
           />
 
           <p className="mt-8 text-center text-slate-600 max-w-3xl mx-auto">
