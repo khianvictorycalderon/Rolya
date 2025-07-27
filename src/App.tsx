@@ -111,7 +111,7 @@ export default function App() {
       </section>
       
       <div id="sales_listing"/>
-      <section className="pb-20 bg-white">
+      <section className="pb-20 bg-slate-50">
         <div className="max-w-screen-2xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-10 text-slate-800 text-center">
             Sales Listings
