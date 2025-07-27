@@ -36,6 +36,7 @@ export default function App() {
           { Label: "Service", OnClick: () => alert("Services") },
         ]}
       />
+      
       <div id="hero">
         <Hero
           BG_Image="images/bg.jpg"
