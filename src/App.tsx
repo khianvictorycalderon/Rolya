@@ -69,7 +69,6 @@ export default function App() {
           <h2 className="text-3xl font-bold mb-10 text-slate-800 text-center">
             Featured Listings
           </h2>
-
           <CardList
             Data={[
               {
@@ -100,7 +99,6 @@ export default function App() {
 
             MaxRow={3}
           />
-
           <p className="mt-8 text-center text-slate-600 max-w-3xl mx-auto">
             These handpicked properties showcase the best in modern design, location, and comfort—perfect for families, professionals, and investors seeking premium real estate in our top fictional cities.
           </p>
