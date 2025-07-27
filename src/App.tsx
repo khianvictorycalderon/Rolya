@@ -8,6 +8,7 @@ import TalkAgent from "./static_components/talk_agent";
 import ServiceOffers from "./static_components/service_offer";
 import AboutUs from "./static_components/about";
 import ContactUs from "./static_components/contact";
+import Footer from "./static_components/footer";
 
 // Only show alert on production so that I won't be annoyed in development
 const isProduction = process.env.NODE_ENV === "production";
@@ -303,6 +304,8 @@ export default function App() {
 
         <div id="contact"/>
         <ContactUs/>
+
+        <Footer/>
     </>
   )
 }
